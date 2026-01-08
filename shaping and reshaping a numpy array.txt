@@ -1,0 +1,23 @@
+import numpy as np 
+#Dimensions of NumPy array 
+a = np.array([[10, 15, 20, 25], [30, 35, 40,45]]) 
+print("Dimensions of NumPy array:") 
+print(a.ndim)      
+#Shape of NumPy array 
+print("enter the shape of numpy array:") 
+print(a.shape)     
+#Size of NumPy array 
+print("enter the size of Numpy array:") 
+print(a.size) 
+#Reshaping a NumPy array 
+reshapearray = a.reshape(4, 2)                       
+print("Reshaping a Numpy array:") 
+print(reshapearray) 
+#Flattening a NumPy array 
+flattenarray = a.flatten()                              
+print("Flattening a Numpy array:") 
+print(flattenarray)  
+#Transpose of a NumPy array 
+transposearray = a.transpose()                       
+print("Transpose of a Numpy array:") 
+print(transposearray)    
