@@ -1,0 +1,11 @@
+import numpy as np 
+# Array 
+array = np.array([100, 200, 300])                    
+print("Array:", array) 
+#Expanding a NumPy array 
+# Adding a new axis at position 0 
+expandarray = np.expand_dims(array, axis=0)         
+print("Expanded array (axis=0):\n", expandarray) 
+# Adding a new axis at position 1 
+expandarray1 = np.expand_dims(array, axis=1)       
+print("Expanded array (axis=1):\n", expandarray1)
