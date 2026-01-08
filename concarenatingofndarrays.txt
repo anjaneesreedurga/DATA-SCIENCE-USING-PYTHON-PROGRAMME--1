@@ -1,0 +1,12 @@
+import numpy as np 
+# Create two 2-D arrays 
+array1= np.array([[10, 20], [30, 40]]) 
+array2 = np.array([[50, 60], [70, 80]]) 
+# Concatenate along axis 0 (columns) 
+concataxis0 = np.concatenate((array1, array2), axis=0) 
+print("Concatenate along axis 0 (columns):") 
+print(concataxis0) 
+# Concatenate along axis 1 (rows) 
+concataxis1 = np.concatenate((array1, array2), axis=1) 
+print("Concatenate along axis 1 (rows):") 
+print(concataxis1) 
