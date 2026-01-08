@@ -1,0 +1,10 @@
+from PIL import Image 
+from IPython.display import display  # Import display function 
+# Open an image file 
+image = Image.open("D:\\sample.jpg") 
+# Display the image inside Jupyter Notebook 
+display(image) 
+# Get image details 
+print("Image format:", image.format) 
+print("Image size:", image.size) 
+print("Image mode:", image.mode)

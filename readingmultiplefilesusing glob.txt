@@ -1,0 +1,9 @@
+import glob 
+# Get all text files in the directory 
+files = glob.glob("D:\\*.txt") 
+print("List of text files:", files) 
+# Read all text files
+for file in files: 
+    with open(file, "r") as f: 
+        print(f"Contents of {file}:") 
+        print(f.read()) 

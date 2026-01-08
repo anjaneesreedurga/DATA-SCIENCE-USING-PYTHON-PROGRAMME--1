@@ -1,0 +1,22 @@
+import pickle 
+# Define the Employee class 
+class Emp: 
+    def __init__(self, eno, ename, esal, eaddr): 
+        self.eno = eno 
+        self.ename = ename 
+        self.esal = esal 
+        self.eaddr = eaddr 
+    def display(self): 
+        print("eno: {}, ename: {}, esal: {}, eaddr: {}".format(self.eno, self.ename, 
+self.esal, self.eaddr)) 
+# Creating an Employee object 
+e = Emp(10, "Alice", 1000, "tpt") 
+# Pickling (Serializing) the object 
+with open('d:\\emp.ser', 'wb') as f: 
+    pickle.dump(e, f) 
+print("Pickling of employee is completed") 
+# Unpickling (Deserializing) the object 
+with open('d:\\emp.ser', 'rb') as f: 
+    obj = pickle.load(f) 
+print("Unpickling of employee is completed") 
+obj.display()

@@ -1,0 +1,18 @@
+import requests 
+from bs4 import BeautifulSoup 
+# Step 1: Send a GET request to the website 
+url = 'http://quotes.toscrape.com/' 
+response = requests.get(url) 
+# Step 2: Parse the HTML content using BeautifulSoup 
+soup = BeautifulSoup(response.text, 'html.parser') 
+# Step 3: Extract the quotes, authors, and tags 
+quotes = soup.find_all('div', class_='quote') 
+# Step 4: Loop through each quote and extract details 
+for quote in quotes: 
+    text = quote.find('span', class_='text').get_text() 
+    author = quote.find('small', class_='author').get_text() 
+    tags = [tag.get_text() for tag in quote.find_all('a', class_='tag')]    
+    # Print the quote, author, and tags 
+    print(f"Quote: {text}") 
+    print(f"Author: {author}") 
+    print(f"Tags: {', '.join(tags)}\n")

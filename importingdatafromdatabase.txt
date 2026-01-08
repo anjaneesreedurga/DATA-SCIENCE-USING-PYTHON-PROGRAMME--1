@@ -1,0 +1,22 @@
+import sqlite3 
+# Database file path 
+db_path = "D:\\test.db" 
+# Connect to the database (or create one if it doesn't exist) 
+conn = sqlite3.connect(db_path) 
+cursor = conn.cursor() 
+# Create a sample table 
+cursor.execute("CREATE TABLE IF NOT EXISTS students (id INTEGER, 
+name TEXT, age INTEGER)") 
+# Insert sample data
+cursor.execute("INSERT INTO students VALUES (1, 'Alice', 22)") 
+cursor.execute("INSERT INTO students VALUES (2, 'Bob', 23)") 
+conn.commit() 
+print("Data inserted successfully.") 
+# Read data from the table 
+cursor.execute("SELECT * FROM students") 
+rows = cursor.fetchall() 
+print("Database Data:") 
+for row in rows: 
+    print(row) 
+# Close the connection 
+conn.close()
