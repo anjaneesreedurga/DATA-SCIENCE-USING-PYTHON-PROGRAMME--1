@@ -1,0 +1,29 @@
+import numpy as np 
+#Basic ndarray 
+basicarray = np.array([10, 15, 20, 25, 30])           
+print("Basic ndarray:") 
+print(basicarray) 
+#Array of zeros    
+zeroarray = np.zeros((3, 3),dtype=int)                          
+print("Array of zeros:") 
+print(zeroarray) 
+#Array of ones 
+onesarray = np.ones((3, 3),dtype=int)                            
+print("Array of ones:") 
+print(onesarray) 
+#Random numbers in ndarray 
+randomarray = np.random.random((3, 3))             
+print("Random numbers in ndarray:") 
+print(randomarray) 
+#An array of your choice 
+choicearray = np.array([[10, 20, 30], [40, 50, 60]])    
+print("An array of your choice:") 
+print(choicearray) 
+#Imatrix in NumPy  
+identitymatrix = np.eye(3,dtype=int)                  
+print("Imatrix in Numpy:") 
+print(identitymatrix) 
+#Evenly spaced ndarray 
+evenlyspaced = np.arange(0, 10, 3)                  
+print("Evenly spaced ndarray:") 
+print(evenlyspaced) 
