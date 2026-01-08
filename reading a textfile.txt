@@ -1,0 +1,11 @@
+import pandas as pd 
+# Reading a comma-separated text file 
+df = pd.read_csv('d:\\textfile.txt')  # Ensure the file exists in the current 
+directory 
+print(df) 
+Input file 
+Assume textfile.txt contains: 
+Name,Age,City
+a,25,Mumbai
+b,24,Delhi
+c,25,Mumbai

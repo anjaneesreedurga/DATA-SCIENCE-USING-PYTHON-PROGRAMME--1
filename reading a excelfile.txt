@@ -1,0 +1,13 @@
+Source Code 
+import pandas as pd 
+# Reading an Excel file 
+data = pd.read_excel("d:\\excel.xlsx")  # Update path as needed 
+df = pd.DataFrame(data) 
+print(df) 
+ 
+Input file 
+Assume excel.xlsx contains: 
+Name,Age,City
+A,25,Mumbai
+B,26,Delhi
+c,24,Amritsar

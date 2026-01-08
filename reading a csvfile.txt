@@ -1,0 +1,12 @@
+import pandas as pd 
+# Reading a CSV file 
+dfcsv = pd.read_csv('d:\\abc.csv')  # Ensure the file exists in the current 
+directory 
+print(dfcsv) 
+ 
+Input file 
+Assume abc.csv contains:
+Employee,Department,Salary
+A,Finance,50000
+B,IT,60000
+C,HR,55000

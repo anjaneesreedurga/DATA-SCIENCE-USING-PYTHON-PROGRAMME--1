@@ -1,0 +1,23 @@
+import json 
+# Create a Python dictionary 
+data = { 
+    "NAME": "A", 
+    "AGE": 28, 
+    "CITY": "DELHI", 
+    "HASCHILDREN": False, 
+    "HOBBIES": ["READING", "TRAVELLING", "SWIMMING"] 
+} 
+# Write the dictionary to a JSON file 
+filename = 'data.json' 
+with open(filename, 'w') as json_file: 
+    json.dump(data, json_file, indent=4) 
+print("JSON file {} created successfully.".format(filename))
+
+Step 2: Read the JSON File 
+ 
+Source Code 
+import pandas as pd 
+# Reading the JSON file 
+dfjson = pd.read_json('data.json')  # Ensure the file exists in the current 
+directory 
+print(dfjson) 
