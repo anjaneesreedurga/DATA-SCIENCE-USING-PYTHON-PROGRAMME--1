@@ -1,0 +1,9 @@
+import numpy as np 
+# Create a 2D NumPy array 
+array = np.array([[30, 10, 20], [50, 40, 60]]) 
+# Sort along the first axis (columns)
+sortedarray = np.sort(array, axis=0) 
+print("Sorted along axis 0 (columns):\n", sortedarray) 
+# Sort along the second axis (rows) 
+sortedarray = np.sort(array, axis=1) 
+print("Sorted along axis 1 (rows):\n", sortedarray)
