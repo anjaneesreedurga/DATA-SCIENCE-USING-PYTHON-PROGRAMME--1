@@ -1,0 +1,30 @@
+import pandas as pd 
+# Creating the first DataFrame 
+data1 = { 
+    'Name': ['MS DHONI', 'YUVRAJ SINGH', 'VIRAT KOHLI'], 
+    'Age': [40, 39, 35], 
+    'City': ['RANCHI', 'PUNJAB', 'DELHI'] 
+} 
+df = pd.DataFrame(data1) 
+# Creating the second DataFrame 
+data2 = { 
+    'Name': ['ROHITH SHARMA', 'SACHIN T'], 
+    'Age': [37, 45], 
+    'City': ['MUMBAI', 'MUMBAI'] 
+} 
+df2 = pd.DataFrame(data2) 
+# Concatenating the DataFrames 
+dfconcat = pd.concat([df, df2], ignore_index=True)
+# Setting a condition to filter the DataFrame 
+dffiltered = dfconcat[dfconcat['Age'] > 35] 
+# Adding a new column 
+dfconcat['Senior'] = dfconcat['Age'] >= 40 
+# Displaying the results 
+print("Original DataFrame:") 
+print(df) 
+print("\nConcatenated DataFrame:") 
+print(dfconcat) 
+print("\nFiltered DataFrame (Age > 35):") 
+print(dffiltered) 
+print("\nDataFrame with new 'Senior' column:") 
+print(dfconcat)
